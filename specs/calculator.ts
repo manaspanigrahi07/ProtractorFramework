@@ -70,7 +70,7 @@ describe("Calculator Test", function(){
         element(by.id("gobutton")).click();
         browser.sleep(3000);
         //expect<any>(element(by.binding('latest')).getText()).toEqual('15'); //Incorrect expectation
-	    expect<any>(element(by.binding('latest')).getText()).toEqual('200'); //Correct expectation
+	    expect<any>(element(by.binding('latest')).getText()).toEqual('20'); //Correct expectation
 
     })
 })
