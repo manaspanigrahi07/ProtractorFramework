@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="1" tests="12" time="81.636">
- <testsuite name="Calculator Test" timestamp="2020-02-04T15:39:55" hostname="localhost" time="31.098" errors="0" tests="8" skipped="0" disabled="0" failures="1">
-  <testcase classname="Calculator Test" name="Verify application url" time="1.225" />
-  <testcase classname="Calculator Test" name="Add two numbers" time="4.499" />
-  <testcase classname="Calculator Test" name="Add two numbers" time="4.271" />
-  <testcase classname="Calculator Test" name="Add two numbers" time="4.215" />
-  <testcase classname="Calculator Test" name="Substract two numbers" time="4.191" />
-  <testcase classname="Calculator Test" name="Multiply two numbers" time="4.259" />
-  <testcase classname="Calculator Test" name="Devide two numbers" time="4.172" />
-  <testcase classname="Calculator Test" name="Modulo % two numbers" time="4.265">
+<testsuites disabled="0" errors="0" failures="1" tests="12" time="85.649">
+ <testsuite name="Calculator Test" timestamp="2020-02-04T16:56:32" hostname="localhost" time="32.079" errors="0" tests="8" skipped="0" disabled="0" failures="1">
+  <testcase classname="Calculator Test" name="Verify application url" time="1.859" />
+  <testcase classname="Calculator Test" name="Add two numbers" time="4.418" />
+  <testcase classname="Calculator Test" name="Add two numbers" time="4.247" />
+  <testcase classname="Calculator Test" name="Add two numbers" time="4.32" />
+  <testcase classname="Calculator Test" name="Substract two numbers" time="4.226" />
+  <testcase classname="Calculator Test" name="Multiply two numbers" time="4.257" />
+  <testcase classname="Calculator Test" name="Devide two numbers" time="4.176" />
+  <testcase classname="Calculator Test" name="Modulo % two numbers" time="4.574">
    <failure type="toEqual" message="Expected &apos;2&apos; to equal &apos;20&apos;."><![CDATA[Error: Failed expectation
     at UserContext.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/specs/calculator.js:77:83)
     at /Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:112:25
@@ -22,12 +22,12 @@
    </failure>
   </testcase>
  </testsuite>
- <testsuite name="Banking Project Test" timestamp="2020-02-04T15:40:26" hostname="localhost" time="38.383" errors="0" tests="2" skipped="0" disabled="0" failures="0">
-  <testcase classname="Banking Project Test" name="Verify application url" time="2.601" />
-  <testcase classname="Banking Project Test" name="Verify Application Flow" time="35.782" />
+ <testsuite name="Banking Project Test" timestamp="2020-02-04T16:57:04" hostname="localhost" time="38.228" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Banking Project Test" name="Verify application url" time="2.364" />
+  <testcase classname="Banking Project Test" name="Verify Application Flow" time="35.864" />
  </testsuite>
- <testsuite name="Non Angular Application Test" timestamp="2020-02-04T15:41:04" hostname="localhost" time="12.155" errors="0" tests="2" skipped="0" disabled="0" failures="0">
-  <testcase classname="Non Angular Application Test" name="Verify application url" time="5.831" />
-  <testcase classname="Non Angular Application Test" name="Add two numbers" time="6.324" />
+ <testsuite name="Non Angular Application Test" timestamp="2020-02-04T16:57:42" hostname="localhost" time="15.342" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Non Angular Application Test" name="Verify application url" time="8.824" />
+  <testcase classname="Non Angular Application Test" name="Add two numbers" time="6.518" />
  </testsuite>
 </testsuites>

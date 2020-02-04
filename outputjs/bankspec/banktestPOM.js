@@ -7,7 +7,7 @@ var OpenAccountPage_1 = require("../webpages/OpenAccountPage");
 var CustomersPage_1 = require("../webpages/CustomersPage");
 var log4jsonconfig_1 = require("../config/log4jsonconfig");
 //import * as prop from '../testdata/prop.json';
-// group of specs or tests to execute 
+// Group of specs or tests to execute 
 describe("Banking Project Test", function () {
     var prop1 = require("../testdata/prop1");
     var originalTimeout;

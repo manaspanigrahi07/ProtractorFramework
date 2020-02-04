@@ -1,2 +1,5 @@
 node_modules/
 screenshots/
+log_file.log/
+reports/xml/xmlresults.xml/
+reports/ProtractorTestReport.html/

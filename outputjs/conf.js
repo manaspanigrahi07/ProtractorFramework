@@ -7,7 +7,7 @@ var jasmineReporters = require('jasmine-reporters');
 var HTMLReport = require('protractor-html-reporter-2');
 var fs = require('fs-extra');
 exports.config = {
-    // to run code without running standalone webdriver manager server
+    // To run code without running standalone webdriver manager server
     //directConnect: true,
     framework: "jasmine2",
     //defaultTimeoutInterval: 60000,
