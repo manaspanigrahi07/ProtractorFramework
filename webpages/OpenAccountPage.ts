@@ -35,7 +35,7 @@ export class OpenAccountPage{
         }
     })
 }
-    // Select Dollar
+    // Select Currency : Dollar
     SelectDollar(){
         this.Currency.$('[value="Dollar"]').click();
         browser.sleep(3000);

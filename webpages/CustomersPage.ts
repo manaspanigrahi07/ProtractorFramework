@@ -11,6 +11,7 @@ export class CustomersPage{
         //fname = (<any>prop).customers.firstname;
         fname = this.prop1.customers.firstname;
 
+        // Verify customer entry in the table and delete his details
         VerifyCustEntryAndDelete(){
             let fname = this.fname;
             this.rows.each(function(row: any){

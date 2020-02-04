@@ -1,6 +1,8 @@
 import { browser, element, by } from "protractor";
 import { protractor } from "protractor/built/ptor";
+import { log4jsconfig } from "../config/log4jsonconfig";
 
+// Verify and Close Alert dialog box
 export class alert {
     static VerifyAndCloseAlert(text: String){
         let EC = protractor.ExpectedConditions;
@@ -10,14 +12,12 @@ export class alert {
         let alertText = alert.getText();
 
         alertText.then(function(txt){
-            //log4jsconfig.log().debug(txt);
+            log4jsconfig.Log().debug(txt);
             console.log(txt);
-        //})
 
         browser.sleep(3000); 
         expect(alertText).toContain(text);
         alert.accept();
-
         })
     }
 }

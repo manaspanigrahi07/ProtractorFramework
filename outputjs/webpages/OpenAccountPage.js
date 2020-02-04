@@ -38,7 +38,7 @@ var OpenAccountPage = /** @class */ (function () {
             }
         });
     };
-    // Select Dollar
+    // Select Currency : Dollar
     OpenAccountPage.prototype.SelectDollar = function () {
         this.Currency.$('[value="Dollar"]').click();
         protractor_1.browser.sleep(3000);

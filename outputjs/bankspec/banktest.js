@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var protractor_1 = require("protractor");
 var ptor_1 = require("protractor/built/ptor");
+// Group of specs or tests to execute 
 describe("Banking Project Test", function () {
+    // Switch to Alert, verify and close the Alert dialog box
     function VerifyAndCloseAlert(text) {
         var EC = ptor_1.protractor.ExpectedConditions;
         protractor_1.browser.wait(EC.alertIsPresent(), 4000, "Alert Not Found");
@@ -16,10 +18,12 @@ describe("Banking Project Test", function () {
         expect(alertText).toContain(text);
         alert.accept();
     }
+    //Get application URL before each test function
     beforeEach(function () {
         protractor_1.browser.get("https://www.way2automation.com/angularjs-protractor/banking/#/login");
     });
-    it("Launch url Check", function () {
+    // verify application URL
+    it("Verify application url", function () {
         expect(protractor_1.browser.getTitle()).toContain("Bank");
         //console.log("Browser Title :-" +browser.getTitle());
         var browserTitle = protractor_1.browser.getTitle();
@@ -27,6 +31,7 @@ describe("Banking Project Test", function () {
             console.log("Browser Title :-" + txt);
         });
     });
+    // 1st Test to Add Customer1 details
     it("Add Customer1", function () {
         protractor_1.element(protractor_1.by.buttonText('Bank Manager Login')).click();
         protractor_1.browser.sleep(3000);
@@ -36,8 +41,10 @@ describe("Banking Project Test", function () {
         protractor_1.element(protractor_1.by.model("lName")).sendKeys("Panigrahi");
         protractor_1.element(protractor_1.by.model('postCd')).sendKeys('12345');
         protractor_1.element(protractor_1.by.className('btn btn-default')).click();
+        // Verify and Close Alert dialog box
         VerifyAndCloseAlert("Customer added successfully");
     });
+    // Test to Add Customer2 details
     // it("Add Customer2", function(){
     //     element(by.buttonText('Bank Manager Login')).click();
     //     browser.sleep(3000);
@@ -47,8 +54,10 @@ describe("Banking Project Test", function () {
     //     element(by.model("lName")).sendKeys("Davu");
     //     element(by.model('postCd')).sendKeys('123456');
     //     element(by.className('btn btn-default')).click();
+    //Verify and close Alert dialogbox
     //     VerifyAndCloseAlert("Customer added successfully");
     // })
+    // Test to Add Customer3 details
     // it("Add Customer3", function(){
     //     element(by.buttonText('Bank Manager Login')).click();
     //     browser.sleep(3000);
@@ -58,8 +67,10 @@ describe("Banking Project Test", function () {
     //     element(by.model("lName")).sendKeys("Kumar");
     //     element(by.model('postCd')).sendKeys('1234567');
     //     element(by.className('btn btn-default')).click();
+    //Verify and Close Alert dialog box
     //     VerifyAndCloseAlert("Customer added successfully");
     // })
+    // 2nd Test to Open customer Account
     it("Open Accounts", function () {
         protractor_1.element(protractor_1.by.buttonText('Bank Manager Login')).click();
         protractor_1.browser.sleep(3000);
@@ -84,17 +95,21 @@ describe("Banking Project Test", function () {
                 _loop_1(i);
             }
         });
+        // Select Curreny value
         protractor_1.element(protractor_1.by.model('currency')).$('[value="Dollar"]').click(); //$=by.css (Single Column)
         protractor_1.element(protractor_1.by.buttonText("Process")).click();
         protractor_1.browser.sleep(4000);
+        // Verify and close alert dialogbox
         VerifyAndCloseAlert("Account created");
     });
+    //Verify customer details in table 
     it("Customers Table", function () {
         protractor_1.element(protractor_1.by.buttonText('Bank Manager Login')).click();
         protractor_1.browser.sleep(3000);
         protractor_1.element(protractor_1.by.buttonText('Customers')).click();
         var rows = protractor_1.element.all(protractor_1.by.repeater('cust in Customers | orderBy:sortType:sortReverse | filter:searchCustomer'));
         protractor_1.browser.sleep(10000);
+        // Check Customer details and delete customer from table
         rows.each(function (row) {
             var _a;
             var cells = (_a = row) === null || _a === void 0 ? void 0 : _a.$$('td'); //all(by.css)(Multiple Columns)

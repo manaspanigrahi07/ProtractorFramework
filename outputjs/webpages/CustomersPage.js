@@ -11,6 +11,7 @@ var CustomersPage = /** @class */ (function () {
         //fname = (<any>prop).customers.firstname;
         this.fname = this.prop1.customers.firstname;
     }
+    // Verify customer entry in the table and delete his details
     CustomersPage.prototype.VerifyCustEntryAndDelete = function () {
         var fname = this.fname;
         this.rows.each(function (row) {

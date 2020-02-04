@@ -9,6 +9,11 @@ module.exports = {
     "customers2": {
         "firstname": "Abhai",
         "lastname": "Kumar",
-        "postalcode": "123465"
+        "postalcode": "345678"
+    },
+    "customers3": {
+        "firstname": "Vamsi",
+        "lastname": "Dhar",
+        "postalcode": "456789"
     }
 };
