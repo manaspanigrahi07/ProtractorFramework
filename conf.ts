@@ -17,8 +17,8 @@ export let config: Config = {
     
     //specify the browsers details to run test
     capabilities: {
-        browserName: 'chrome',
-        // browserName : 'firefox',
+        //browserName: 'chrome',
+        browserName : 'firefox',
         // marionette : true,
         //acceptSslCerts : true
     },

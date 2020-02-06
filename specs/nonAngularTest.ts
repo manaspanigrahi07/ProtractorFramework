@@ -13,6 +13,7 @@ describe("Non Angular Application Test", function(){
     })
 
     // Verify application url
+    log4jsconfig.Log().debug("Verifying Application Url");
     it("Verify application url", function(){
         expect(browser.getTitle()).toContain("Demo : Practice test automation");
         //console.log("Browser Title :-" +browser.getTitle());
@@ -23,7 +24,8 @@ describe("Non Angular Application Test", function(){
         });
     })
 
-    // 1st Test to Add two numbers
+    // 1st Test to Enter User Details
+    log4jsconfig.Log().debug("Test Started to Enter User details");
     it("Add two numbers", function(){
         element(by.id("username")).sendKeys("Manas");
         element(by.id("email")).sendKeys("Panigrahi");
@@ -32,8 +34,8 @@ describe("Non Angular Application Test", function(){
         
         element(by.xpath("/html/body/div[1]/div/div/div/div/section/div[2]/article/div/div[1]/form/fieldset/div[9]/input")).click();
         browser.sleep(3000);
-        //expect<any>(element(by.binding('latest')).getText()).toEqual('5'); //Incorrect expectation
-	    //expect<any>(element(by.binding('latest')).getText()).toEqual('15'); //Correct expectation
+        log4jsconfig.Log().debug("Test Completed with Entering User details");
+        
 
     })
 
