@@ -1,1 +1,23 @@
-[2020-02-05T16:47:02.600] [DEBUG] default - Test Completed with Entering User details
+[2020-02-11T15:59:00.092] [DEBUG] default - is element present ? : true
+[2020-02-11T15:59:00.165] [DEBUG] default - is element displayed ? : true
+[2020-02-11T15:59:00.209] [DEBUG] default - is element enabled ? : true
+[2020-02-11T15:59:00.256] [DEBUG] default - is element selected ? : false
+[2020-02-11T15:59:00.429] [DEBUG] default - is element present ? : true
+[2020-02-11T15:59:00.493] [DEBUG] default - is element displayed ? : true
+[2020-02-11T15:59:00.536] [DEBUG] default - is element enabled ? : true
+[2020-02-11T15:59:00.577] [DEBUG] default - is element selected ? : false
+[2020-02-11T15:59:00.886] [DEBUG] default - Dropdown option size7
+[2020-02-11T15:59:00.910] [DEBUG] default - ---Customer Name---
+[2020-02-11T15:59:00.930] [DEBUG] default - Hermoine Granger
+[2020-02-11T15:59:00.948] [DEBUG] default - Harry Potter
+[2020-02-11T15:59:00.971] [DEBUG] default - Ron Weasly
+[2020-02-11T15:59:00.990] [DEBUG] default - Albus Dumbledore
+[2020-02-11T15:59:01.014] [DEBUG] default - Neville Longbottom
+[2020-02-11T15:59:01.046] [DEBUG] default - Manas Panigrahi
+[2020-02-11T15:59:01.047] [DEBUG] default - Item found on the List
+[2020-02-11T15:59:10.349] [DEBUG] default - Account created successfully with account Number :1016
+[2020-02-11T15:59:16.409] [DEBUG] default - is element present ? : true
+[2020-02-11T15:59:16.461] [DEBUG] default - is element displayed ? : true
+[2020-02-11T15:59:16.505] [DEBUG] default - is element enabled ? : true
+[2020-02-11T15:59:16.543] [DEBUG] default - is element selected ? : false
+[2020-02-11T15:59:19.860] [DEBUG] default - Customer details deleted from table successfully

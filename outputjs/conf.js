@@ -14,8 +14,7 @@ exports.config = {
     useAllAngular2AppRoots: true,
     //specify the browsers details to run test
     capabilities: {
-        //browserName: 'chrome',
-        browserName: 'firefox',
+        browserName: 'chrome',
     },
     // To run individual test specs
     //specs :['./specs/calculator.js'],

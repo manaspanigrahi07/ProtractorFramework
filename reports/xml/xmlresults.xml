@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="1" tests="12" time="88.11">
- <testsuite name="Calculator Test" timestamp="2020-02-05T16:45:37" hostname="localhost" time="33.913" errors="0" tests="8" skipped="0" disabled="0" failures="1">
-  <testcase classname="Calculator Test" name="Verify application url" time="2.079" />
-  <testcase classname="Calculator Test" name="Add two numbers (10 + 20 = ?)" time="5.579" />
-  <testcase classname="Calculator Test" name="Add two numbers (5 + 7 = ?)" time="4.34" />
-  <testcase classname="Calculator Test" name="Add two numbers (4 + 5 = ?)" time="5.116" />
-  <testcase classname="Calculator Test" name="Substract two number" time="4.129" />
-  <testcase classname="Calculator Test" name="Multiply two numbers" time="4.276" />
-  <testcase classname="Calculator Test" name="Devide two numbers" time="4.243" />
-  <testcase classname="Calculator Test" name="Modulo % two numbers" time="4.149">
-   <failure type="toEqual" message="Expected &apos;2&apos; to equal &apos;20&apos;."><![CDATA[Error: Failed expectation
-    at UserContext.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/specs/calculator.js:93:83)
-    at /Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:112:25
-    at new ManagedPromise (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:1077:7)
-    at ControlFlow.promise (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:2505:12)
-    at schedulerExecute (/Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:95:18)
-    at TaskQueue.execute_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3084:14)
-    at TaskQueue.executeNext_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3067:27)
-    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:2974:25
-    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:668:7]]>
-   </failure>
-  </testcase>
- </testsuite>
- <testsuite name="Banking Project Test" timestamp="2020-02-05T16:46:11" hostname="localhost" time="39.716" errors="0" tests="2" skipped="0" disabled="0" failures="0">
-  <testcase classname="Banking Project Test" name="Verify application url" time="2.61" />
-  <testcase classname="Banking Project Test" name="Verify Application Flow" time="37.105" />
- </testsuite>
- <testsuite name="Non Angular Application Test" timestamp="2020-02-05T16:46:51" hostname="localhost" time="14.481" errors="0" tests="2" skipped="0" disabled="0" failures="0">
-  <testcase classname="Non Angular Application Test" name="Verify application url" time="8.15" />
-  <testcase classname="Non Angular Application Test" name="Add two numbers" time="6.331" />
+<testsuites disabled="0" errors="0" failures="0" tests="2" time="38.562">
+ <testsuite name="Banking Project Test" timestamp="2020-02-11T15:58:44" hostname="localhost" time="38.562" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Banking Project Test" name="Verify application url" time="1.599" />
+  <testcase classname="Banking Project Test" name="Verify Application Flow" time="36.962" />
  </testsuite>
 </testsuites>

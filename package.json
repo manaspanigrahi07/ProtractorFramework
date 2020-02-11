@@ -21,8 +21,9 @@
   "scripts": {
     "tsc": "tsc",
     "pretest": "npm run tsc",
-    "test": "protractor outputjs/conf.js --suite bothapp"
+    "test": "protractor outputjs/conf.js --suite banktestPOM"
   },
   "author": "manas",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {}
 }
