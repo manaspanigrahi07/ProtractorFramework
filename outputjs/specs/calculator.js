@@ -27,6 +27,7 @@ describe("Calculator Test", function () {
         var first = data.firstNumber;
         var second = data.secondNumber;
         var exceptedOutput = data.output;
+        var histrory = protractor_1.element.all(protractor_1.by.repeater('result in memory'));
         it("Add two numbers (" + first + " + " + second + " = ?)", function () {
             log4jsonconfig_1.log4jsconfig.Log().debug("Test Started to add two numbers (" + first + " + " + second + " = ?)");
             protractor_1.element(protractor_1.by.model("first")).sendKeys(first);
@@ -38,6 +39,7 @@ describe("Calculator Test", function () {
             //expect<any>(element(by.binding('latest')).getText()).toEqual('10'); //Incorrect expectation
             //expect<any>(element(by.binding('latest')).getText()).toEqual('20'); //Correct expectation
             expect(protractor_1.element(protractor_1.by.binding('latest')).getText()).toEqual(String(exceptedOutput)); //Correct expectation
+            expect(history.count()).toEqual(3);
             log4jsonconfig_1.log4jsconfig.Log().debug("Test Completed... Added two numbers.. Verified the Output (" + first + " + " + second + " =" + exceptedOutput + ")");
         });
     });
@@ -52,6 +54,7 @@ describe("Calculator Test", function () {
         protractor_1.browser.sleep(3000);
         //expect<any>(element(by.binding('latest')).getText()).toEqual('5'); //Incorrect expectation
         expect(protractor_1.element(protractor_1.by.binding('latest')).getText()).toEqual('5'); //Correct expectation
+        expect(history.count()).toEqual(3);
         log4jsonconfig_1.log4jsconfig.Log().debug("Test Completed... Substract two numbers.. Verified the Output ('5')");
     });
     // 3rd Test "Multiply two numbers"
@@ -65,6 +68,7 @@ describe("Calculator Test", function () {
         protractor_1.browser.sleep(3000);
         //expect<any>(element(by.binding('latest')).getText()).toEqual('15'); //Incorrect expectation
         expect(protractor_1.element(protractor_1.by.binding('latest')).getText()).toEqual('50'); //Correct expectation
+        expect(history.count()).toEqual(3);
         log4jsonconfig_1.log4jsconfig.Log().debug("Test Completed... Multiply two numbers.. Verified the Output ('50')");
     });
     // 4th Test "Devide two numbers"
@@ -78,6 +82,7 @@ describe("Calculator Test", function () {
         protractor_1.browser.sleep(3000);
         //expect<any>(element(by.binding('latest')).getText()).toEqual('15'); //Incorrect expectation
         expect(protractor_1.element(protractor_1.by.binding('latest')).getText()).toEqual('3'); //Correct expectation
+        expect(history.count()).toEqual(3);
         log4jsonconfig_1.log4jsconfig.Log().debug("Test Completed... Devide two numbers.. Verified the Output ('3')");
     });
     // 5th Test "Modulo % of two numbers"
@@ -91,6 +96,12 @@ describe("Calculator Test", function () {
         protractor_1.browser.sleep(3000);
         //expect<any>(element(by.binding('latest')).getText()).toEqual('15'); //Incorrect expectation
         expect(protractor_1.element(protractor_1.by.binding('latest')).getText()).toEqual('20'); //Correct expectation
+        expect(history.count()).toEqual(3);
         log4jsonconfig_1.log4jsconfig.Log().debug("Test Completed... Modulo(%) two numbers.. Verified the Output ");
+    });
+    // Get list of all elements
+    it(" Get list of all Elements", function () {
+        //var histrory = element.all(by.repeater('result in memory'));
+        expect(history.count()).toEqual(7);
     });
 });

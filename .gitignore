@@ -3,3 +3,6 @@ screenshots/
 log_file.log/
 reports/xml/xmlresults.xml/
 reports/ProtractorTestReport.html/
+log_file.log.%d{11/02 15:59} %-5p %m.1
+log_file.log.%d{12/02 11:58} %-5p %m.1
+log_file.log.%d{12/02 15:29} %-5p %m.1

@@ -21,7 +21,7 @@
   "scripts": {
     "tsc": "tsc",
     "pretest": "npm run tsc",
-    "test": "protractor outputjs/conf.js --suite banktestPOM"
+    "test": "protractor outputjs/conf.js --suite calculator"
   },
   "author": "manas",
   "license": "ISC",
