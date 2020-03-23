@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var protractor_1 = require("protractor");
-var webElementState_1 = require("../util/webElementState");
+var webElementState_1 = require("../utils/webElementState");
 var BasePage = /** @class */ (function () {
     function BasePage() {
         this.home = protractor_1.element(protractor_1.by.buttonText('Home'));

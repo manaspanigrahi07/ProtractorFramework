@@ -1,6 +1,28 @@
-[2020-02-12T15:30:03.730] [DEBUG] default - Account created successfully with account Number :1016
-[2020-02-12T15:30:09.790] [DEBUG] default - is element present ? : true
-[2020-02-12T15:30:09.846] [DEBUG] default - is element displayed ? : true
-[2020-02-12T15:30:09.891] [DEBUG] default - is element enabled ? : true
-[2020-02-12T15:30:09.939] [DEBUG] default - is element selected ? : false
-[2020-02-12T15:30:13.277] [DEBUG] default - Customer details deleted from table successfully
+[2020-03-19T13:54:17.327] [DEBUG] default - Browser Title 2:- Protractor practice website - Banking App
+[2020-03-19T13:54:21.067] [DEBUG] default - is element present ? : true
+[2020-03-19T13:54:21.175] [DEBUG] default - is element displayed ? : true
+[2020-03-19T13:54:21.239] [DEBUG] default - is element enabled ? : true
+[2020-03-19T13:54:21.308] [DEBUG] default - is element selected ? : false
+[2020-03-19T13:54:25.327] [DEBUG] default - Customer added successfully with customer id :6
+[2020-03-19T13:54:31.391] [DEBUG] default - is element present ? : true
+[2020-03-19T13:54:31.455] [DEBUG] default - is element displayed ? : true
+[2020-03-19T13:54:31.534] [DEBUG] default - is element enabled ? : true
+[2020-03-19T13:54:31.604] [DEBUG] default - is element selected ? : false
+[2020-03-19T13:54:31.811] [DEBUG] default - is element present ? : true
+[2020-03-19T13:54:31.880] [DEBUG] default - is element displayed ? : true
+[2020-03-19T13:54:31.935] [DEBUG] default - is element enabled ? : true
+[2020-03-19T13:54:31.995] [DEBUG] default - is element selected ? : false
+[2020-03-19T13:54:32.434] [DEBUG] default - Dropdown option size7
+[2020-03-19T13:54:32.460] [DEBUG] default - ---Customer Name---
+[2020-03-19T13:54:32.489] [DEBUG] default - Hermoine Granger
+[2020-03-19T13:54:32.519] [DEBUG] default - Harry Potter
+[2020-03-19T13:54:32.549] [DEBUG] default - Ron Weasly
+[2020-03-19T13:54:32.573] [DEBUG] default - Albus Dumbledore
+[2020-03-19T13:54:32.594] [DEBUG] default - Neville Longbottom
+[2020-03-19T13:54:32.625] [DEBUG] default - Manas Panigrahi
+[2020-03-19T13:54:32.627] [DEBUG] default - Item found on the List
+[2020-03-19T13:54:41.982] [DEBUG] default - Account created successfully with account Number :1016
+[2020-03-19T13:54:48.043] [DEBUG] default - is element present ? : true
+[2020-03-19T13:54:48.103] [DEBUG] default - is element displayed ? : true
+[2020-03-19T13:54:48.145] [DEBUG] default - is element enabled ? : true
+[2020-03-19T13:54:48.225] [DEBUG] default - is element selected ? : false

@@ -4,12 +4,12 @@ var protractor_1 = require("protractor");
 var AddCustPage_1 = require("../pages/AddCustPage");
 var BasePage_1 = require("../pages/BasePage");
 var OpenAccountPage_1 = require("../pages/OpenAccountPage");
-var CustomersPage_1 = require("../pages/CustomersPage");
 var log4jsonconfig_1 = require("../config/log4jsonconfig");
+var CustomerLogin_1 = require("../pages/CustomerLogin");
 //import * as prop from '../testdata/prop.json';
 // Group of specs or tests to execute 
 describe("Banking Project Test", function () {
-    var prop1 = require("../data/prop1");
+    var prop1 = require("../testdata/prop1");
     var originalTimeout;
     beforeEach(function () {
         //browser.get("https://www.way2automation.com/angularjs-protractor/banking/#/login");
@@ -60,8 +60,25 @@ describe("Banking Project Test", function () {
         new BasePage_1.BasePage().ClickCustTab();
         protractor_1.browser.useAllAngular2AppRoots();
         protractor_1.browser.sleep(3000);
-        // Verify Customer entry in the table and then delete his details
-        new CustomersPage_1.CustomersPage().VerifyCustEntryAndDelete();
+        // Click on Home button Go to Customer Login Page
+        // Navigate to Open Account page
+        var custlogin = new CustomerLogin_1.CustomerLogin();
+        //Select Customer from dropdown
+        custlogin.SelectACustomer("Manas Panigrahi");
+        protractor_1.browser.sleep(3000);
+        //let addcustpage = new AddCustomerPage();
+        //Select Customer : Name
+        // SelectCustomerName(){
+        //     this.CustID.$('[value="Harry Potter"]').click();
+        //     browser.sleep(3000);
+        // }
+        //custlogin.$('[value="Harry Potter"]').click();
+        protractor_1.browser.sleep(3000);
+        // Select Customer
+        var Login = protractor_1.element(protractor_1.by.buttonText("Login"));
+        //CustID = element(by.model('custId')); //$=by.css (Single Column)
+        //Click on Login Button
+        Login.click();
         protractor_1.browser.sleep(3000);
     });
 });

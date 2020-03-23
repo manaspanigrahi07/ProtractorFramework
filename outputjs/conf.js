@@ -24,10 +24,12 @@ exports.config = {
     // To run all test specs as a suites
     suites: {
         calculator: ['./specs/calculator.js'],
-        bank: ['./bankspec/banktest.js'],
+        banktest: ['./bankspec/banktest.js'],
         banktestPOM: ['./bankspec/banktestPOM.js'],
         bothapp: ['./specs/calculator.js', './bankspec/banktestPOM.js', './specs/nonAngularTest.js'],
-        nonangular: ['./specs/nonAngularTest.js'] //Non Angular Application
+        nonangular: ['./specs/nonAngularTest.js'],
+        userform: ['./specs/userForm.js'],
+        custLogin: ['./bankspec/custLogin.js'] // Customer Login
     },
     // Selenium webdriver url details
     seleniumAddress: 'http://localhost:4444/wd/hub',
@@ -45,11 +47,11 @@ exports.config = {
         // generates the xml reports of test results
         jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
             consolidateAll: true,
-            savePath: './reports/xml',
+            savePath: './output/reports/xml',
             filePrefix: 'xmlresults'
         }));
         // specify the directory to store screenshots
-        fs.emptyDir('./reports/screenshots', function (err) {
+        fs.emptyDir('./output/reports/screenshots', function (err) {
             console.log(err);
         });
         //generate jasmine reports with environment details
@@ -59,7 +61,7 @@ exports.config = {
                     protractor_1.browser.getCapabilities().then(function (caps) {
                         var browserName = caps.get('browserName');
                         protractor_1.browser.takeScreenshot().then(function (png) {
-                            var stream = fs.createWriteStream('./reports/screenshots/' + browserName + '-' + result.fullName + '.png');
+                            var stream = fs.createWriteStream('./output/reports/screenshots/' + browserName + '-' + result.fullName + '.png');
                             stream.write(new Buffer(png, 'base64'));
                             stream.end();
                         });
@@ -82,17 +84,17 @@ exports.config = {
             // Path : file:///Users/manasp/Documents/ProtractorTest/reports/ProtractorTestReport.html
             testConfig = {
                 reportTitle: 'Protractor Test Execution Report',
-                outputPath: './reports/',
+                outputPath: './output/reports/',
                 outputFilename: 'ProtractorTestReport',
-                screenshotPath: './screenshots',
+                screenshotPath: './output/reports/screenshots',
                 testBrowser: browserName,
                 browserVersion: browserVersion,
                 modifiedSuiteName: false,
                 screenshotsOnlyOnFailure: true,
                 testPlatform: platform
             };
-            //
-            new HTMLReport().from('./reports/xml/xmlresults.xml', testConfig);
+            // /Users/manasp/Documents/ProtractorTest/output
+            new HTMLReport().from('./output/reports/xml/xmlresults.xml', testConfig);
         });
     },
 };

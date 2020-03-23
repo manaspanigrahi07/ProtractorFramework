@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="1" tests="2" time="42.215">
- <testsuite name="Banking Project Test" timestamp="2020-03-18T14:34:37" hostname="localhost" time="42.215" errors="0" tests="2" skipped="0" disabled="0" failures="1">
-  <testcase classname="Banking Project Test" name="Verify application url" time="6.764" />
-  <testcase classname="Banking Project Test" name="Verify Application Flow" time="35.448">
+<testsuites disabled="0" errors="0" failures="1" tests="2" time="36.501">
+ <testsuite name="Banking Project Test" timestamp="2020-03-19T13:54:14" hostname="localhost" time="36.501" errors="0" tests="2" skipped="0" disabled="0" failures="1">
+  <testcase classname="Banking Project Test" name="Verify application url" time="2.424" />
+  <testcase classname="Banking Project Test" name="Verify Application Flow" time="34.076">
    <failure type="exception" message="Failed: No element found using locator: by.model(&quot;custId&quot;)"><![CDATA[NoSuchElementError: No element found using locator: by.model("custId")
     at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/element.js:814:27
     at ManagedPromise.invokeCallback_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:1376:14)

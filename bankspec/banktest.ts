@@ -32,7 +32,11 @@ describe("Banking Project Test", function () {
         //console.log("Browser Title :-" +browser.getTitle());
         let browserTitle = browser.getTitle();
         browserTitle.then(function (txt) {
-            console.log("Browser Title :-" + txt);
+            if (txt == "Valid Application URL") {
+                console.log("Browser Title :-" + txt);
+            }else{
+                console.log("Please Enter Valid Application URL");
+            }
         });
     })
 
@@ -124,15 +128,53 @@ describe("Banking Project Test", function () {
         browser.sleep(10000);
 
         // Check Customer details and delete customer from table
-        rows.each(function (row: any) {
-            let cells = row?.$$('td'); //all(by.css)(Multiple Columns)
-            cells.get(0).getText().then(function (txt: any) {
-                if (txt == 'Manas') {
-                    cells.get(4).$('button').click();
-                    console.log('Customer details deleted from table successfully');
-                }
-            })
-        })
+        // rows.each(function (row: any) {
+        //     let cells = row?.$$('td'); //all(by.css)(Multiple Columns)
+        //     cells.get(0).getText().then(function (txt: any) {
+        //         if (txt == 'Manas') {
+        //             cells.get(4).$('button').click();
+        //             console.log('Customer details deleted from table successfully');
+        //         }
+        //     })
+        // })
     })
     browser.sleep(10000);
+
+    // Login with Customer Name
+    it("Customer Login", function () {
+        element(by.buttonText('Home')).click();
+        browser.sleep(3000);
+        element(by.buttonText('Customer Login')).click();
+        browser.sleep(3000);
+        //element(by.className('btn btn-lg tab btn-primary')).click();
+
+        // Select Customer from Dropdown
+        let customers = element(by.model('custId'));
+        let options = customers.all(by.tagName('option'));
+
+        options.then(function (items) {
+            //log4jconfig.log().debug("Dropdown option size" + items.length);
+            console.log("Dropdown option size :" + items.length);
+
+            for (let i = 0; i < items.length; i++) {
+                items[i].getText().then(function (txt: any) {
+                    //console.log().debug(txt);
+                    console.log(txt);
+                    if (txt == "Manas Panigrahi") {
+                        console.log("Item found on the list");
+                        items[i].click();
+                    }
+                })
+            }
+        })
+        // Click on Login Button
+        element(by.buttonText("Login")).click();
+        browser.sleep(4000);
+
+        // Verify Post Login Page
+        element(by.binding('Manas Panigrahi')).getText().then(function(txt){
+        expect(txt).toBe("Welcome Manas Panigrahi !! ")
+        })
+    })
+
 })

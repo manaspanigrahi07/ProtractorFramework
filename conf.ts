@@ -32,10 +32,12 @@ export let config: Config = {
     // To run all test specs as a suites
     suites: {
         calculator: ['./specs/calculator.js'], //Sanity Test
-        bank: ['./bankspec/banktest.js'], //Smoke Test
+        banktest: ['./bankspec/banktest.js'], //Smoke Test
         banktestPOM: ['./bankspec/banktestPOM.js'], //Bank Test POM
         bothapp: ['./specs/calculator.js', './bankspec/banktestPOM.js', './specs/nonAngularTest.js'], // Regression Test
-        nonangular: ['./specs/nonAngularTest.js'] //Non Angular Application
+        nonangular: ['./specs/nonAngularTest.js'], //Non Angular Application
+        userform: ['./specs/userForm.js'], // User Form Application
+        custLogin: ['./bankspec/custLogin.js'] // Customer Login
     },
 
     // Selenium webdriver url details
@@ -56,12 +58,12 @@ export let config: Config = {
         // generates the xml reports of test results
         jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
             consolidateAll: true,
-            savePath: './reports/xml',
+            savePath: './output/reports/xml',
             filePrefix: 'xmlresults'
         }));
 
         // specify the directory to store screenshots
-        fs.emptyDir('./reports/screenshots', function (err: any) {
+        fs.emptyDir('./output/reports/screenshots', function (err: any) {
             console.log(err);
         });
 
@@ -72,7 +74,7 @@ export let config: Config = {
                     browser.getCapabilities().then(function (caps) {
                         var browserName = caps.get('browserName');
                         browser.takeScreenshot().then(function (png) {
-                            var stream = fs.createWriteStream('./reports/screenshots/' + browserName + '-' + result.fullName + '.png');
+                            var stream = fs.createWriteStream('./output/reports/screenshots/' + browserName + '-' + result.fullName + '.png');
                             stream.write(new Buffer(png, 'base64'));
                             stream.end();
                         });
@@ -97,17 +99,17 @@ export let config: Config = {
             // Path : file:///Users/manasp/Documents/ProtractorTest/reports/ProtractorTestReport.html
             testConfig = {
                 reportTitle: 'Protractor Test Execution Report',
-                outputPath: './reports/',
+                outputPath: './output/reports/',
                 outputFilename: 'ProtractorTestReport',
-                screenshotPath: './screenshots',
+                screenshotPath: './output/reports/screenshots',
                 testBrowser: browserName,
                 browserVersion: browserVersion,
                 modifiedSuiteName: false,
                 screenshotsOnlyOnFailure: true,
                 testPlatform: platform
             };
-            //
-            new HTMLReport().from('./reports/xml/xmlresults.xml', testConfig);
+            // /Users/manasp/Documents/ProtractorTest/output
+            new HTMLReport().from('./output/reports/xml/xmlresults.xml', testConfig);
         });
     },
 }

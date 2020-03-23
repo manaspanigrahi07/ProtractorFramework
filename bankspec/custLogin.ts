@@ -4,16 +4,17 @@ import { AddCustomerPage } from '../pages/AddCustPage';
 import { BasePage } from '../pages/BasePage';
 import { OpenAccountPage } from '../pages/OpenAccountPage';
 import { CustomersPage } from '../pages/CustomersPage';
-import { log4jsconfig} from '../config/log4jsonconfig';
+import { log4jsconfig } from '../config/log4jsonconfig';
+import { CustomerLogin } from '../pages/CustomerLogin';
 //import * as prop from '../testdata/prop.json';
 
 // Group of specs or tests to execute 
-describe("Banking Project Test", function(){
+describe("Banking Project Test", function () {
 
-    let prop1 = require("../data/prop1");
-    
-    let originalTimeout : any;
-    beforeEach(function(){
+    let prop1 = require("../testdata/prop1");
+
+    let originalTimeout: any;
+    beforeEach(function () {
         //browser.get("https://www.way2automation.com/angularjs-protractor/banking/#/login");
         //browser.get((<any>prop).appurl);
         browser.get(prop1.appurl);
@@ -21,25 +22,25 @@ describe("Banking Project Test", function(){
         originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
         jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000000;
     })
-     afterEach(function() {
+    afterEach(function () {
         jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
     });
 
     // verify application url before test
-    it("Verify application url", function(){
+    it("Verify application url", function () {
         expect(browser.getTitle()).toContain("Bank");
         //console.log("Browser Title :-" +browser.getTitle());
         let browserTitle = browser.getTitle();
-        browserTitle.then(function(txt){
+        browserTitle.then(function (txt) {
             //console.log("Browser Title :-" + txt);
             log4jsconfig.Log().debug("Browser Title 1:- " + txt);
             log4jsconfig.Log().debug("Browser Title 2:- " + txt);
-            
+
         });
     })
 
     // application end-to-end flow test
-    it("Verify Application Flow", function(){
+    it("Verify Application Flow", function () {
         element(by.buttonText('Bank Manager Login')).click();
         browser.sleep(3000);
 
@@ -50,7 +51,7 @@ describe("Banking Project Test", function(){
         let addcustpage = new AddCustomerPage();
 
         // Add customer details (name,postalcode etc)
-        addcustpage.AddCustomer("firstname","lastname","postalcode");
+        addcustpage.AddCustomer("firstname", "lastname", "postalcode");
         browser.sleep(3000);
 
         new BasePage().ClickAddCustTab();
@@ -77,9 +78,32 @@ describe("Banking Project Test", function(){
         browser.useAllAngular2AppRoots();
         browser.sleep(3000);
 
-        // Verify Customer entry in the table and then delete his details
-        new CustomersPage().VerifyCustEntryAndDelete();
+        // Click on Home button Go to Customer Login Page
+        // Navigate to Open Account page
+        let custlogin = new CustomerLogin();
+
+        //Select Customer from dropdown
+        custlogin.SelectACustomer("Manas Panigrahi");
+        browser.sleep(3000);
+        //let addcustpage = new AddCustomerPage();
+        //Select Customer : Name
+        // SelectCustomerName(){
+        //     this.CustID.$('[value="Harry Potter"]').click();
+        //     browser.sleep(3000);
+        // }
+
+        //custlogin.$('[value="Harry Potter"]').click();
         browser.sleep(3000);
 
+        // Select Customer
+        let Login = element(by.buttonText("Login"));
+        //CustID = element(by.model('custId')); //$=by.css (Single Column)
+
+        //Click on Login Button
+        Login.click();
+        browser.sleep(3000);
+
+
     })
-})
+
+});

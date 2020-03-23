@@ -28,7 +28,12 @@ describe("Banking Project Test", function () {
         //console.log("Browser Title :-" +browser.getTitle());
         var browserTitle = protractor_1.browser.getTitle();
         browserTitle.then(function (txt) {
-            console.log("Browser Title :-" + txt);
+            if (txt == "Valid Application URL") {
+                console.log("Browser Title :-" + txt);
+            }
+            else {
+                console.log("Please Enter Valid Application URL");
+            }
         });
     });
     // 1st Test to Add Customer1 details
@@ -110,16 +115,50 @@ describe("Banking Project Test", function () {
         var rows = protractor_1.element.all(protractor_1.by.repeater('cust in Customers | orderBy:sortType:sortReverse | filter:searchCustomer'));
         protractor_1.browser.sleep(10000);
         // Check Customer details and delete customer from table
-        rows.each(function (row) {
-            var _a;
-            var cells = (_a = row) === null || _a === void 0 ? void 0 : _a.$$('td'); //all(by.css)(Multiple Columns)
-            cells.get(0).getText().then(function (txt) {
-                if (txt == 'Manas') {
-                    cells.get(4).$('button').click();
-                    console.log('Customer details deleted from table successfully');
-                }
-            });
-        });
+        // rows.each(function (row: any) {
+        //     let cells = row?.$$('td'); //all(by.css)(Multiple Columns)
+        //     cells.get(0).getText().then(function (txt: any) {
+        //         if (txt == 'Manas') {
+        //             cells.get(4).$('button').click();
+        //             console.log('Customer details deleted from table successfully');
+        //         }
+        //     })
+        // })
     });
     protractor_1.browser.sleep(10000);
+    // Login with Customer Name
+    it("Customer Login", function () {
+        protractor_1.element(protractor_1.by.buttonText('Home')).click();
+        protractor_1.browser.sleep(3000);
+        protractor_1.element(protractor_1.by.buttonText('Customer Login')).click();
+        protractor_1.browser.sleep(3000);
+        //element(by.className('btn btn-lg tab btn-primary')).click();
+        // Select Customer from Dropdown
+        var customers = protractor_1.element(protractor_1.by.model('custId'));
+        var options = customers.all(protractor_1.by.tagName('option'));
+        options.then(function (items) {
+            //log4jconfig.log().debug("Dropdown option size" + items.length);
+            console.log("Dropdown option size :" + items.length);
+            var _loop_2 = function (i) {
+                items[i].getText().then(function (txt) {
+                    //console.log().debug(txt);
+                    console.log(txt);
+                    if (txt == "Manas Panigrahi") {
+                        console.log("Item found on the list");
+                        items[i].click();
+                    }
+                });
+            };
+            for (var i = 0; i < items.length; i++) {
+                _loop_2(i);
+            }
+        });
+        // Click on Login Button
+        protractor_1.element(protractor_1.by.buttonText("Login")).click();
+        protractor_1.browser.sleep(4000);
+        // Verify Post Login Page
+        protractor_1.element(protractor_1.by.binding('Manas Panigrahi')).getText().then(function (txt) {
+            expect(txt).toBe("Welcome Manas Panigrahi !! ");
+        });
+    });
 });
