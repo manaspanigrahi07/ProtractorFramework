@@ -10,7 +10,7 @@ var fs = require('fs-extra');
 
 export let config: Config = {
     // To run code without running standalone webdriver manager server
-    //directConnect: true,
+    directConnect: true,
     framework: "jasmine2",
     //defaultTimeoutInterval: 60000,
     useAllAngular2AppRoots: true,
@@ -18,6 +18,7 @@ export let config: Config = {
     //specify the browsers details to run test
     capabilities: {
         browserName: 'chrome',
+        chromeDriver: './chromedriver.exe',
         //browserName : 'firefox',
         // marionette : true,
         //acceptSslCerts : true
@@ -41,19 +42,26 @@ export let config: Config = {
     },
 
     // Selenium webdriver url details
-    seleniumAddress: 'http://localhost:4444/wd/hub',
+    //seleniumAddress: 'http://localhost:4444/wd/hub',
 
     /* A callback function called once protractor is ready and available, and before the specs are executed. 
     If multiple capabilities are being run, this will run once per capability. */
-    onPrepare: function () {
+    onPrepare: async function () {
         //
         (global as any).isAngularSite = function (flag: boolean) {
-            browser.ignoreSynchronization = !flag;
+            //browser.ignoreSynchronization = !flag;
+            browser.waitForAngularEnabled (!flag);
         }
-        // Environment details
+        /**
+         * WebDriver general settings for browsers.
+         */
         var os = require('os');
+        await browser.manage().deleteAllCookies();
+        // https://github.com/angular/protractor/issues/1467
         //browser.manage().window().maximize();
-        browser.manage().timeouts().implicitlyWait(4000);
+        await browser.manage().window().setSize(1280, 1024);
+        await browser.manage().timeouts().implicitlyWait(20000);
+        await browser.manage().timeouts().pageLoadTimeout(60000);
 
         // generates the xml reports of test results
         jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
