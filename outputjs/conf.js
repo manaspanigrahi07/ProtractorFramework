@@ -8,13 +8,14 @@ var HTMLReport = require('protractor-html-reporter-2');
 var fs = require('fs-extra');
 exports.config = {
     // To run code without running standalone webdriver manager server
-    //directConnect: true,
+    directConnect: true,
     framework: "jasmine2",
     //defaultTimeoutInterval: 60000,
     useAllAngular2AppRoots: true,
     //specify the browsers details to run test
     capabilities: {
         browserName: 'chrome',
+        chromeDriver: './chromedriver.exe',
     },
     // To run individual test specs
     //specs :['./specs/calculator.js'],
@@ -32,7 +33,7 @@ exports.config = {
         custLogin: ['./bankspec/custLogin.js'] // Customer Login
     },
     // Selenium webdriver url details
-    seleniumAddress: 'http://localhost:4444/wd/hub',
+    //seleniumAddress: 'http://localhost:4444/wd/hub',
     /* A callback function called once protractor is ready and available, and before the specs are executed.
     If multiple capabilities are being run, this will run once per capability. */
     onPrepare: function () {

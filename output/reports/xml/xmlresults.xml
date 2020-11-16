@@ -1,38 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="1" tests="2" time="36.501">
- <testsuite name="Banking Project Test" timestamp="2020-03-19T13:54:14" hostname="localhost" time="36.501" errors="0" tests="2" skipped="0" disabled="0" failures="1">
-  <testcase classname="Banking Project Test" name="Verify application url" time="2.424" />
-  <testcase classname="Banking Project Test" name="Verify Application Flow" time="34.076">
-   <failure type="exception" message="Failed: No element found using locator: by.model(&quot;custId&quot;)"><![CDATA[NoSuchElementError: No element found using locator: by.model("custId")
-    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/element.js:814:27
-    at ManagedPromise.invokeCallback_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:1376:14)
-    at TaskQueue.execute_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3084:14)
-    at TaskQueue.executeNext_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3067:27)
-    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:2927:27
-    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:668:7
-    at processTicksAndRejections (internal/process/task_queues.js:94:5)
-From: Task: Run it("Verify Application Flow") in control flow
-    at UserContext.<anonymous> (/Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:94:19)
-    at attempt (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
-    at QueueRunner.run (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
-    at runNext (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)
-    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13
-    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9
-    at /Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:64:48
-    at ControlFlow.emit (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/events.js:62:21)
-    at ControlFlow.shutdown_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:2674:10)
-    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:2599:53
-From asynchronous test: 
-Error
-    at Suite.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/bankspec/custLogin.js:36:5)
+<testsuites disabled="0" errors="0" failures="1" tests="2" time="2.161">
+ <testsuite name="Calculator Test" timestamp="2020-11-16T17:47:15" hostname="localhost" time="2.161" errors="0" tests="2" skipped="0" disabled="0" failures="1">
+  <testcase classname="Calculator Test" name="Verify application url" time="1.297" />
+  <testcase classname="Calculator Test" name="encountered a declaration exception" time="0.863">
+   <failure type="exception" message="Error: ENOENT: no such file or directory, open &apos;./testdata/testData.xlsx&apos;"><![CDATA[Error: ENOENT: no such file or directory, open './testdata/testData.xlsx'
+    at Object.openSync (fs.js:440:3)
+    at Object.readFileSync (fs.js:342:35)
+    at read_binary (/Users/manasp/Documents/ProtractorTest/node_modules/xlsx/xlsx.js:2627:44)
+    at readSync (/Users/manasp/Documents/ProtractorTest/node_modules/xlsx/xlsx.js:20689:69)
+    at Object.readFileSync (/Users/manasp/Documents/ProtractorTest/node_modules/xlsx/xlsx.js:20717:9)
+    at Function.xlReader.read_from_excel (/Users/manasp/Documents/ProtractorTest/outputjs/utils/xlReader.js:9:29)
+    at Suite.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/specs/calculator.js:27:41)
     at addSpecsToSuite (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)
     at Env.describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)
-    at describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)
-    at Object.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/bankspec/custLogin.js:11:1)
-    at Module._compile (internal/modules/cjs/loader.js:955:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
-    at Module.load (internal/modules/cjs/loader.js:811:32)
-    at Function.Module._load (internal/modules/cjs/loader.js:723:14)]]>
+    at describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)]]>
    </failure>
   </testcase>
  </testsuite>
