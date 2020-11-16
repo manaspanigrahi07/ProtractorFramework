@@ -46,15 +46,22 @@ export let config: Config = {
 
     /* A callback function called once protractor is ready and available, and before the specs are executed. 
     If multiple capabilities are being run, this will run once per capability. */
-    onPrepare: function () {
+    onPrepare: async function () {
         //
         (global as any).isAngularSite = function (flag: boolean) {
-            browser.ignoreSynchronization = !flag;
+            //browser.ignoreSynchronization = !flag;
+            browser.waitForAngularEnabled (!flag);
         }
-        // Environment details
+        /**
+         * WebDriver general settings for browsers.
+         */
         var os = require('os');
+        await browser.manage().deleteAllCookies();
+        // https://github.com/angular/protractor/issues/1467
         //browser.manage().window().maximize();
-        browser.manage().timeouts().implicitlyWait(4000);
+        await browser.manage().window().setSize(1280, 1024);
+        await browser.manage().timeouts().implicitlyWait(20000);
+        await browser.manage().timeouts().pageLoadTimeout(60000);
 
         // generates the xml reports of test results
         jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
