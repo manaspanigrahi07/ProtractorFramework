@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="1" tests="2" time="2.161">
- <testsuite name="Calculator Test" timestamp="2020-11-16T17:47:15" hostname="localhost" time="2.161" errors="0" tests="2" skipped="0" disabled="0" failures="1">
-  <testcase classname="Calculator Test" name="Verify application url" time="1.297" />
-  <testcase classname="Calculator Test" name="encountered a declaration exception" time="0.863">
+<testsuites disabled="0" errors="0" failures="1" tests="2" time="2.01">
+ <testsuite name="Calculator Test" timestamp="2020-11-16T18:22:29" hostname="localhost" time="2.01" errors="0" tests="2" skipped="0" disabled="0" failures="1">
+  <testcase classname="Calculator Test" name="Verify application url" time="1.591" />
+  <testcase classname="Calculator Test" name="encountered a declaration exception" time="0.416">
    <failure type="exception" message="Error: ENOENT: no such file or directory, open &apos;./testdata/testData.xlsx&apos;"><![CDATA[Error: ENOENT: no such file or directory, open './testdata/testData.xlsx'
     at Object.openSync (fs.js:440:3)
     at Object.readFileSync (fs.js:342:35)
