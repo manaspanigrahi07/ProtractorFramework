@@ -9,13 +9,13 @@ fdescribe("User Form Test", function () {
 
     //Get application URL before each test function
     beforeEach(function () {
-        browser.get("http://localhost:4200/");
+        browser.get("http://10.105.127.83:4200/");
     })
 
     // verify application URL
     log4jsconfig.Log().debug("Verifying Application Url");
     it("Verify application url", function () {
-        expect(browser.getTitle()).toContain("Dynamic");
+        expect(browser.getTitle()).toContain("CloudportalUi");
         //log4jsconfig.Log().debug("Browser Title :-" +browser.getTitle());
         //console.log("Browser Title :-" +browser.getTitle());
         let browserTitle = browser.getTitle();

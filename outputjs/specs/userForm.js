@@ -8,12 +8,12 @@ fdescribe("User Form Test", function () {
     // Global Veriables
     //Get application URL before each test function
     beforeEach(function () {
-        protractor_1.browser.get("http://localhost:4200/");
+        protractor_1.browser.get("http://10.105.127.83:4200/");
     });
     // verify application URL
     log4jsonconfig_1.log4jsconfig.Log().debug("Verifying Application Url");
     it("Verify application url", function () {
-        expect(protractor_1.browser.getTitle()).toContain("Dynamic");
+        expect(protractor_1.browser.getTitle()).toContain("CloudportalUi");
         //log4jsconfig.Log().debug("Browser Title :-" +browser.getTitle());
         //console.log("Browser Title :-" +browser.getTitle());
         var browserTitle = protractor_1.browser.getTitle();
