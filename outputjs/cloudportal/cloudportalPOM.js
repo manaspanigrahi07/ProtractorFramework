@@ -18,7 +18,7 @@ describe("Cloud Portal UI Project Test", function () {
     afterEach(function () {
         jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
     });
-    // verify application url before test
+    // Verify application url before test
     it("Verify application url", function () {
         expect(protractor_1.browser.getTitle()).toContain("CloudportalUi");
         //console.log("Browser Title :-" +browser.getTitle());
@@ -28,7 +28,7 @@ describe("Cloud Portal UI Project Test", function () {
             log4jsonconfig_1.log4jsconfig.Log().debug("Browser Title :- " + txt);
         });
     });
-    // application end-to-end flow test
+    // Application end-to-end flow test
     it("Cloud Portal Application Login", function () {
         log4jsonconfig_1.log4jsconfig.Log().debug("Test Started to Login to Cloud Portal..");
         // Login to Cloud Portal Application
@@ -37,10 +37,10 @@ describe("Cloud Portal UI Project Test", function () {
         // Add customer details (userName,userPassword)
         cploginpage.CPUserLogin("username", "password");
         log4jsonconfig_1.log4jsconfig.Log().debug("Loggedin successfully to Cloud Portal..");
-        protractor_1.browser.sleep(8000);
+        protractor_1.browser.sleep(3000);
         // Validate CloudPortal Home Page 
         protractor_1.browser.getTitle()
             .then(function () { return (log4jsonconfig_1.log4jsconfig.Log().debug("Loggedin successfully to Cloud Portal UI..")); });
-        protractor_1.browser.sleep(5000);
+        protractor_1.browser.sleep(3000);
     });
 });

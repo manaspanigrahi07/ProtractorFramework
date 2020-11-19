@@ -1,7 +1,173 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuites disabled="0" errors="0" failures="0" tests="2" time="28.92">
- <testsuite name="Cloud Portal UI Project Test" timestamp="2020-11-19T01:03:35" hostname="localhost" time="28.92" errors="0" tests="2" skipped="0" disabled="0" failures="0">
-  <testcase classname="Cloud Portal UI Project Test" name="Verify application url" time="7.6" />
-  <testcase classname="Cloud Portal UI Project Test" name="Cloud Portal Application Login" time="21.32" />
+<testsuites disabled="0" errors="0" failures="6" tests="2" time="121.728">
+ <testsuite name="Cloud Portal UI Project Test" timestamp="2020-11-19T13:25:11" hostname="localhost" time="121.728" errors="0" tests="2" skipped="0" disabled="0" failures="6">
+  <testcase classname="Cloud Portal UI Project Test" name="Verify application url" time="60.631">
+   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
+    at Timeout._onTimeout (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4281:23)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7)]]>
+   </failure>
+   <failure type="exception" message="Failed: timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=86.0.4240.198)
+  (Driver info: chromedriver=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}),platform=Mac OS X 10.15.7 x86_64)"><![CDATA[TimeoutError: timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=86.0.4240.198)
+  (Driver info: chromedriver=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}),platform=Mac OS X 10.15.7 x86_64)
+    at Object.checkLegacyResponse (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/error.js:546:15)
+    at parseHttpResponse (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/http.js:509:13)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/http.js:441:30
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+From: Task: Protractor.get(http://10.105.127.83:4200/login) - reset url
+    at Driver.schedule (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/webdriver.js:807:17)
+    at ProtractorBrowser.executeScriptWithDescription (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/browser.js:404:28)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/browser.js:679:25
+    at ManagedPromise.invokeCallback_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+    at TaskQueue.execute_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+    at TaskQueue.executeNext_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:2927:27
+    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:668:7
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+From: Task: Run beforeEach in control flow
+    at UserContext.<anonymous> (/Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:94:19)
+    at attempt (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
+    at QueueRunner.run (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
+    at QueueRunner.execute (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4199:10)
+    at Spec.queueRunnerFactory (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:909:35)
+    at Spec.execute (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:526:10)
+    at UserContext.fn (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:5340:37)
+    at attempt (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
+    at QueueRunner.run (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
+    at QueueRunner.execute (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4199:10)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/cloudportal/cloudportalPOM.js:11:5)
+    at addSpecsToSuite (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)
+    at Env.describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)
+    at describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)
+    at Object.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/cloudportal/cloudportalPOM.js:8:1)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)]]>
+   </failure>
+   <failure type="exception" message="Failed: Error while waiting for Protractor to sync with the page: &quot;both angularJS testability and angular testability are undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor&apos;s bootstrapping.  See http://git.io/v4gXM for details&quot;"><![CDATA[Error: Error while waiting for Protractor to sync with the page: "both angularJS testability and angular testability are undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/browser.js:463:23
+    at ManagedPromise.invokeCallback_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+    at TaskQueue.execute_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+    at TaskQueue.executeNext_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:2927:27
+    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:668:7
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+From: Task: Run it("Verify application url") in control flow
+    at UserContext.<anonymous> (/Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:94:19)
+    at attempt (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
+    at QueueRunner.run (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
+    at runNext (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13
+    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9
+    at Timeout.<anonymous> (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4283:11)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/cloudportal/cloudportalPOM.js:22:5)
+    at addSpecsToSuite (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)
+    at Env.describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)
+    at describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)
+    at Object.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/cloudportal/cloudportalPOM.js:8:1)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)]]>
+   </failure>
+  </testcase>
+  <testcase classname="Cloud Portal UI Project Test" name="Cloud Portal Application Login" time="61.093">
+   <failure type="exception" message="Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL."><![CDATA[Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
+    at Timeout._onTimeout (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4281:23)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7)]]>
+   </failure>
+   <failure type="exception" message="Failed: timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=86.0.4240.198)
+  (Driver info: chromedriver=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}),platform=Mac OS X 10.15.7 x86_64)"><![CDATA[TimeoutError: timeout: Timed out receiving message from renderer: 60.000
+  (Session info: chrome=86.0.4240.198)
+  (Driver info: chromedriver=86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}),platform=Mac OS X 10.15.7 x86_64)
+    at Object.checkLegacyResponse (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/error.js:546:15)
+    at parseHttpResponse (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/http.js:509:13)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/http.js:441:30
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+From: Task: Protractor.get(http://10.105.127.83:4200/login) - reset url
+    at Driver.schedule (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/webdriver.js:807:17)
+    at ProtractorBrowser.executeScriptWithDescription (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/browser.js:404:28)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/browser.js:679:25
+    at ManagedPromise.invokeCallback_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+    at TaskQueue.execute_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+    at TaskQueue.executeNext_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:2927:27
+    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:668:7
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)
+From: Task: Run beforeEach in control flow
+    at UserContext.<anonymous> (/Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:94:19)
+    at attempt (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
+    at QueueRunner.run (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
+    at QueueRunner.execute (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4199:10)
+    at Spec.queueRunnerFactory (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:909:35)
+    at Spec.execute (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:526:10)
+    at UserContext.fn (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:5340:37)
+    at attempt (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
+    at QueueRunner.run (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
+    at runNext (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/cloudportal/cloudportalPOM.js:11:5)
+    at addSpecsToSuite (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)
+    at Env.describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)
+    at describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)
+    at Object.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/cloudportal/cloudportalPOM.js:8:1)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)]]>
+   </failure>
+   <failure type="exception" message="Failed: Error while waiting for Protractor to sync with the page: &quot;both angularJS testability and angular testability are undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor&apos;s bootstrapping.  See http://git.io/v4gXM for details&quot;"><![CDATA[Error: Error while waiting for Protractor to sync with the page: "both angularJS testability and angular testability are undefined.  This could be either because this is a non-angular page or because your test involves client-side navigation, which can interfere with Protractor's bootstrapping.  See http://git.io/v4gXM for details"
+    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/browser.js:463:23
+    at ManagedPromise.invokeCallback_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:1376:14)
+    at TaskQueue.execute_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+    at TaskQueue.executeNext_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3067:27)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:2927:27
+    at /Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:668:7
+    at processTicksAndRejections (internal/process/task_queues.js:94:5)Error
+    at ElementArrayFinder.applyAction_ (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/element.js:459:27)
+    at ElementArrayFinder.<computed> [as sendKeys] (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/element.js:91:29)
+    at ElementFinder.<computed> [as sendKeys] (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/built/element.js:831:22)
+    at CPUserLoginPage.CPUserLogin (/Users/manasp/Documents/ProtractorTest/outputjs/pages/CPUserLoginPage.js:16:23)
+    at UserContext.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/cloudportal/cloudportalPOM.js:38:21)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:112:25
+    at new ManagedPromise (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:1077:7)
+    at ControlFlow.promise (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:2505:12)
+    at schedulerExecute (/Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:95:18)
+    at TaskQueue.execute_ (/Users/manasp/Documents/ProtractorTest/node_modules/selenium-webdriver/lib/promise.js:3084:14)
+From: Task: Run it("Cloud Portal Application Login") in control flow
+    at UserContext.<anonymous> (/Users/manasp/Documents/ProtractorTest/node_modules/jasminewd2/index.js:94:19)
+    at attempt (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4297:26)
+    at QueueRunner.run (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4217:20)
+    at runNext (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4257:20)
+    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4264:13
+    at /Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4172:9
+    at Timeout.<anonymous> (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4283:11)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7)
+From asynchronous test: 
+Error
+    at Suite.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/cloudportal/cloudportalPOM.js:32:5)
+    at addSpecsToSuite (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1107:25)
+    at Env.describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:1074:7)
+    at describe (/Users/manasp/Documents/ProtractorTest/node_modules/protractor/node_modules/jasmine-core/lib/jasmine-core/jasmine.js:4399:18)
+    at Object.<anonymous> (/Users/manasp/Documents/ProtractorTest/outputjs/cloudportal/cloudportalPOM.js:8:1)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)]]>
+   </failure>
+  </testcase>
  </testsuite>
 </testsuites>

@@ -9,9 +9,4 @@ module.exports = {
         "username": "mannewcm",
         "password": "Passw0rd",
     },
-    "customers2": {
-        "firstname": "Vamsi",
-        "lastname": "Dhar",
-        "postalcode": "456789"
-    }
 };

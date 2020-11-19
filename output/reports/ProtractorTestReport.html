@@ -189,10 +189,10 @@ th {
         <div class="navbar-header">
           <div class="project-name visible-md visible-lg">Protractor Test Execution Report</div>
           <div class="label-container">
-            <span class="label label-success" title=TestCases>Passed: 2</span>
-            
+            <span class="label label-success" title=TestCases>Passed: 0</span>
+            <span class="label label-danger" title=TestCases>Failed: 2</span> 
 			
-            <span class="label label-info">Time Elapsed: 0h 0min 29s</span>
+            <span class="label label-info">Time Elapsed: 0h 2min 2s</span>
           </div>
         </div>
       </div>
@@ -200,11 +200,11 @@ th {
 
     <div class="container">
 	
-    <div class="generated-on">11/19/2020, 01:03:31</div>
+    <div class="generated-on">11/19/2020, 13:25:03</div>
 	
     <!--<div class="generated-on"><b>Platform:</b> Mac OS X</div>
     <div class="info"><b>Browser:</b> chrome 86.0.4240.198</div>
-    <div class="info"><b>Generated on:</b> 11/19/2020, 01:03:31</div>-->
+    <div class="info"><b>Generated on:</b> 11/19/2020, 13:25:03</div>-->
 
 
       <div class="row">
@@ -246,12 +246,13 @@ th {
       <h4 class="panel-title">
           <a data-toggle="collapse" href="#collapseSuite0">
           
-            <span class="label label-success"><i class="glyphicon glyphicon-ok"></i></span>
+            <span class="label label-danger"><i class="glyphicon glyphicon-remove"></i></span>
           
-          <font color="green"><b>TestSuite:</b>Cloud Portal UI Project Test</font>
+          <font color="red"><b>TestSuite:</b>Cloud Portal UI Project Test</font>
+          
           <span class="label-container">
-            <span class="label label-success">2</span>
             
+            <span class="label label-danger">2</span>
             
             
           </span>
@@ -266,16 +267,16 @@ th {
                     <h4 class="panel-title">
                       <a data-toggle="collapse" href="#collapseTestCase0_0">
                         
-                          <span class="label label-success"><i class="glyphicon glyphicon-ok"></i></span>
+                          <span class="label label-danger"><i class="glyphicon glyphicon-remove"></i></span>
                         
 
-                        <font color="green"><b>TestCase:</b>Verify application url</font>
                         
                         
+                        <font color="red"><b>TestCase:</b>Verify application url</font>
                         <span class="label-container">
-                          <span class="label label-success" title="Passed">Passed</span>
                           
                           
+                          <span class="label label-danger" title="Failed">Failed</span>
                       </a>
                     </h4>
                   </div>
@@ -285,11 +286,22 @@ th {
                       <p class="scenario-container">
                         
                           <span class="label label-primary" title="Success"><i class="glyphicon glyphicon-time"></i></span>
-                          <font color="black">Time elapsed: 8 seconds</font>
+                          <font color="black">Time elapsed: 61 seconds</font>
 
+                          
+                            <br />
+                            <span class="label label-danger"><i class="glyphicon glyphicon-remove"></i></span>
+                            <font color="red">Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.</font>
                           
 
                           
+                            <br />
+                            <span class="label label-primary"><i class="glyphicon glyphicon-camera"></i></span>
+                              Screenshot on failure:
+                            <a class="screenshot" href="./output/reports/screenshots/chrome-Cloud Portal UI Project Test Verify application url.png" data-lightbox="chrome-Cloud Portal UI Project Test Verify application url.png">
+                              <img src="./output/reports/screenshots/chrome-Cloud Portal UI Project Test Verify application url.png" style="width:100%;height:100%" alt="Screenshot not found: ./output/reports/screenshots/chrome-Cloud Portal UI Project Test Verify application url.png"/>
+                            </a>
+                        
                       
                       </p>
                     </div>
@@ -302,16 +314,16 @@ th {
                     <h4 class="panel-title">
                       <a data-toggle="collapse" href="#collapseTestCase0_1">
                         
-                          <span class="label label-success"><i class="glyphicon glyphicon-ok"></i></span>
+                          <span class="label label-danger"><i class="glyphicon glyphicon-remove"></i></span>
                         
 
-                        <font color="green"><b>TestCase:</b>Cloud Portal Application Login</font>
                         
                         
+                        <font color="red"><b>TestCase:</b>Cloud Portal Application Login</font>
                         <span class="label-container">
-                          <span class="label label-success" title="Passed">Passed</span>
                           
                           
+                          <span class="label label-danger" title="Failed">Failed</span>
                       </a>
                     </h4>
                   </div>
@@ -321,11 +333,22 @@ th {
                       <p class="scenario-container">
                         
                           <span class="label label-primary" title="Success"><i class="glyphicon glyphicon-time"></i></span>
-                          <font color="black">Time elapsed: 22 seconds</font>
+                          <font color="black">Time elapsed: 62 seconds</font>
 
+                          
+                            <br />
+                            <span class="label label-danger"><i class="glyphicon glyphicon-remove"></i></span>
+                            <font color="red">Error: Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.</font>
                           
 
                           
+                            <br />
+                            <span class="label label-primary"><i class="glyphicon glyphicon-camera"></i></span>
+                              Screenshot on failure:
+                            <a class="screenshot" href="./output/reports/screenshots/chrome-Cloud Portal UI Project Test Cloud Portal Application Login.png" data-lightbox="chrome-Cloud Portal UI Project Test Cloud Portal Application Login.png">
+                              <img src="./output/reports/screenshots/chrome-Cloud Portal UI Project Test Cloud Portal Application Login.png" style="width:100%;height:100%" alt="Screenshot not found: ./output/reports/screenshots/chrome-Cloud Portal UI Project Test Cloud Portal Application Login.png"/>
+                            </a>
+                        
                       
                       </p>
                     </div>
@@ -367,16 +390,16 @@ th {
       google.charts.load("current", {packages:["corechart"]});
       google.charts.setOnLoadCallback(function() {drawChart({
                                                               "title": "TestSuites",
-                                                              "passed": 1,
-                                                              "failed": 0,
+                                                              "passed": 0,
+                                                              "failed": 1,
         })
       });
       google.charts.setOnLoadCallback(function() {drawChart({
                                                               "title": "TestCases",
-                                                              "passed": 2,
+                                                              "passed": 0,
                                                               "skipped": 0,
                                                               "errors": 0,
-                                                              "failed": 0
+                                                              "failed": 2
         })
       });
 
