@@ -66,7 +66,8 @@ exports.config = {
         bothapp: ['./specs/calculator.js', './bankspec/banktestPOM.js', './specs/nonAngularTest.js'],
         nonangular: ['./specs/nonAngularTest.js'],
         userform: ['./specs/userForm.js'],
-        custLogin: ['./bankspec/custLogin.js'] // Customer Login
+        custLogin: ['./bankspec/custLogin.js'],
+        cloudportalPOM: ['./cloudportal/cloudportalPOM.js'],
     },
     // Selenium webdriver url details
     //seleniumAddress: 'http://localhost:4444/wd/hub',

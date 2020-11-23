@@ -38,7 +38,8 @@ export let config: Config = {
         bothapp: ['./specs/calculator.js', './bankspec/banktestPOM.js', './specs/nonAngularTest.js'], // Regression Test
         nonangular: ['./specs/nonAngularTest.js'], //Non Angular Application
         userform: ['./specs/userForm.js'], // User Form Application
-        custLogin: ['./bankspec/custLogin.js'] // Customer Login
+        custLogin: ['./bankspec/custLogin.js'], // Customer Login
+        cloudportalPOM: ['./cloudportal/cloudportalPOM.js'], //Cloud Portal UI Test POM
     },
 
     // Selenium webdriver url details
