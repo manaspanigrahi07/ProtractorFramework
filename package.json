@@ -16,7 +16,7 @@
     "protractor-html-reporter-2": "^1.0.4",
     "typescript": "~3.7.4",
     "webdriver-manager": "^12.1.7",
-    "xlsx": "^0.15.5"
+    "xlsx": "^0.17.0"
   },
   "scripts": {
     "tsc": "tsc",
